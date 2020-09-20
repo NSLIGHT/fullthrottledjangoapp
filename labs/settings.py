@@ -26,7 +26,7 @@ SECRET_KEY = 'cswhs5lm$)n-oc&7@lgvfkvj7zoho5l*gjxfw@j^p9xynxu!bn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com']
 
 
 # Application definition
