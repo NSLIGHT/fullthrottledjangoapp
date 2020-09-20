@@ -1,1 +1,1 @@
-web: gunicorn labs.labs.wsgi
+web: gunicorn labs.wsgi
