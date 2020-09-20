@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,16 @@
     <title>Logged IN</title>
 </head>
 <body>
-    <h1>Successful logged in</h1><br>
-    <a href="{% url 'home' %}">home</a>
+    {% block content %}
+    <h3>Successful logged in with {{data.REAL_NAME}}</h3>
+    <ul class="list-group">
+        {% for key,value in data.items %}
+        <li class="list-group-item active">{{key}}: {{value}}</li>
+        {% endfor %}
+    </ul>
+    
+    <br>
+    <a href="{% url 'home' %}" class="btn btn-primary">Home</a> 
+    {% endblock %}
 </body>
 </html>

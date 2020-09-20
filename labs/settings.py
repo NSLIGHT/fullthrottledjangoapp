@@ -26,7 +26,7 @@ SECRET_KEY = 'cswhs5lm$)n-oc&7@lgvfkvj7zoho5l*gjxfw@j^p9xynxu!bn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com']
+ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'crispy_forms',
     # 'account',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
