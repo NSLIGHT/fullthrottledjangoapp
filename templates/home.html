@@ -17,6 +17,16 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+        <br><br>
+        {% for message in messages %}
+        
+        <div class="alert alert-success">
+        <p class="text-danger">{{ message }}</p>
+        
+            
+        
+        </div>
+        {% endfor %}
     </form>
     
     

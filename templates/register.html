@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
         <label for="real_name">Real Name :</label>
-        <input type="text" name="real_name" id="real_name" placeholder="real name">
+        <input type="text" name="real_name" id="real_name" placeholder="Real Name">
         </div>
         <div class="form-group">
         <label for="tz">TZ :</label>
@@ -25,7 +25,16 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
     </form>
+    <br><br>
+    {% for message in messages %}
     
+    <div class="alert alert-success">
+        <p class="text-danger">{{ message }}</p>
+    
+    
+    
+    </div>
+    {% endfor %}
     {% endblock %}
 </body>
 </html>

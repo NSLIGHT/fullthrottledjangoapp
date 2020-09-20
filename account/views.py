@@ -4,6 +4,7 @@ from django.conf import settings
 from account.models import member,membership,start_end_time
 from datetime import datetime
 from django.utils import timezone
+from django.contrib import messages
 # Create your views here.
 
 def home(request):
@@ -39,6 +40,7 @@ def login(request):
             print(data)
             return render(request,'login.html',{'data':data})
         else:
+            messages.error(request,'real name not existed')
             return redirect("/")
     else:
         return redirect("/")
@@ -55,6 +57,7 @@ def register(request):
             update_obj.save()
             return redirect('/')
         except Exception as e:
+            messages.error(request,'Real Name or ID already existed')
             return render(request, 'register.html')
         
         
