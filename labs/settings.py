@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'cswhs5lm$)n-oc&7@lgvfkvj7zoho5l*gjxfw@j^p9xynxu!bn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com']
 

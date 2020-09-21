@@ -37,7 +37,12 @@ def login(request):
             data['TZ'] = obj.tz
             data['START TIME'] = obj.activity_period.start_time
             data['END TIME'] = obj.activity_period.end_time
-            print(data)
+
+            obj.delete()
+            s1 = start_end_time(start_time=timezone.now(),end_time=timezone.now())
+            s1.save()
+            update_obj = membership.objects.create(id=data['ID'],real_name=data['REAL_NAME'],tz=data['TZ'], activity_period=s1)
+            update_obj.save()
             return render(request,'login.html',{'data':data})
         else:
             messages.error(request,'real name not existed')
