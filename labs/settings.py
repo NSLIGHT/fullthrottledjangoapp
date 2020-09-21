@@ -26,7 +26,7 @@ SECRET_KEY = 'cswhs5lm$)n-oc&7@lgvfkvj7zoho5l*gjxfw@j^p9xynxu!bn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['fullthrottledjnagoapp.herokuapp.com']
 
 
 # Application definition
@@ -128,10 +128,10 @@ USE_TZ = False
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'media'),
+    # os.path.join(BASE_DIR, 'media'),
 ]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
